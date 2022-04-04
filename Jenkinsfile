@@ -9,7 +9,7 @@ pipeline {
     stage('One') {
       steps{
         echo "One"
-        sh 'echo ENV_URL = ${ENV_URL}
+        sh 'echo ENV_URL = ${ENV_URL}'
       }
     }
     stage('Two') {
