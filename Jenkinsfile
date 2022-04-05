@@ -42,8 +42,6 @@ pipeline {
         sh '''
           echo -e "\\e[31mHello]"
         '''
-        sh 'terraform apply -auto-approve'
-        sh 'mvn --version'
       }
     }
   }
