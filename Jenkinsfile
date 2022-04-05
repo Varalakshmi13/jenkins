@@ -3,6 +3,14 @@ pipeline {
 
   environment {
     ENV_URL = "pipeline.google.com"
+    SSH_CRED = credentials("SSH")
+  }
+  triggers {
+    pollSCM('*/2 * * * *')
+  }
+
+  tools {
+    maven 'maven-3.6.3'
   }
   stages {
 
@@ -34,6 +42,8 @@ pipeline {
         sh '''
           echo -e "\\e[31mHello]"
         '''
+        sh 'terraform apply -auto-approve'
+        sh 'mvn --version'
       }
     }
   }
