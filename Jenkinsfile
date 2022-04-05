@@ -9,9 +9,7 @@ pipeline {
     pollSCM('*/2 * * * *')
   }
 
-  tools {
-    maven 'maven-3.6.3'
-  }
+
   stages {
 
     options {
