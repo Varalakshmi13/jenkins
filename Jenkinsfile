@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     ENV_URL = "pipeline.google.com"
-    SSH_CRED = credentials("SSH")
+//    SSH_CRED = credentials("SSH")
   }
   triggers {
     pollSCM('*/2 * * * *')
